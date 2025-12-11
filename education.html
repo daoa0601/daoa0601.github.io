@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Anh Dao</title>
+    <meta name="description" content="Anh Dao's educational background - Aalto University and Grinnell College.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html" class="active">Education</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="writing.html">Writing</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="education.html" class="mobile-link active">Education</a>
+            <a href="experience.html" class="mobile-link">Experience</a>
+            <a href="writing.html" class="mobile-link">Writing</a>
+            <a href="projects.html" class="mobile-link">Projects</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Education Section -->
+        <section id="education" class="education section page-section">
+            <div class="container">
+                <h1 class="page-title">Education</h1>
+
+                <div class="education-item">
+                    <h3>Aalto University, Finland</h3>
+                    <p class="degree">M.S. in Computer Science</p>
+                    <p class="duration">August 2024 – Current</p>
+                    <p class="grade">GPA: 4.25 / 5.00</p>
+                    <div class="coursework">
+                        <h4>Relevant Coursework:</h4>
+                        <p>Information Security, Network Security, Cloud Software and Development, Deep Learning,
+                            Machine Learning, Computer Graphics, Web Software Development.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <h3>Grinnell College, United States</h3>
+                    <p class="degree">B.A. in Computer Science</p>
+                    <p class="duration">August 2019 – May 2023</p>
+                    <p class="grade">GPA: 3.76 / 4.00</p>
+                    <div class="coursework">
+                        <h4>Relevant Coursework:</h4>
+                        <p>Operating Systems and Parallel Algorithms, Computer Organization and Architecture, Data
+                            Science, Probability and Statistics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Anh Dao. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

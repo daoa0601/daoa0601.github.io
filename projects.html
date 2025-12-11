@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Anh Dao</title>
+    <meta name="description"
+        content="Anh Dao's course and personal projects in software development, security, and machine learning.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="writing.html">Writing</a></li>
+                        <li><a href="projects.html" class="active">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="education.html" class="mobile-link">Education</a>
+            <a href="experience.html" class="mobile-link">Experience</a>
+            <a href="writing.html" class="mobile-link">Writing</a>
+            <a href="projects.html" class="mobile-link active">Projects</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Projects Section -->
+        <section id="projects" class="section page-section">
+            <div class="container">
+                <h1 class="page-title">Course and Personal Projects</h1>
+                <div class="project-note">
+                    <p>As course projects are usually not kept in a repository or made public, this is a work in
+                        progress. Feel free to ask for elaborations on anything listed here!</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Web Software Development</h3>
+                            <div class="tech-badges">
+                                <span class="tech-badge">PostgreSQL</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Playwright</span>
+                            </div>
+                            <p>Aalto University's Web Software Development Course project for Fall 2025 (in progress)
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/daoa0601/wsd-f2025" target="_blank"
+                                    rel="noopener noreferrer" class="icon-btn"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Advanced Topics in Software - LLM Cost Analysis</h3>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">GCP</span>
+                                <span class="tech-badge">Vertex AI</span>
+                            </div>
+                            <p>Aalto University's Advanced Topics in Software Systems course project analyzing LLM
+                                inference costs and optimization strategies.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/daoa0601/cs-e4660-advanced-topics-software" target="_blank"
+                                    rel="noopener noreferrer" class="icon-btn"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Designing and Building Scalable Web Applications</h3>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Javascript</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">Kubernetes</span>
+                            </div>
+                            <p>Aalto University's Designing and Building Scalable Web Applications Course project for
+                                Fall 2025 (in progress)</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Encrypted File Transfer Protocol</h3>
+                            <div class="tech-badges">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">PyCryptodome</span>
+                            </div>
+                            <p>Implemented a secure file messaging protocol using PyCryptodome with a Symmetric Key
+                                Cryptography message transfer sub-protocol following the AES-GCM encryption mode,
+                                ensuring that messages are securely encrypted even in the face of server attacks.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/daoa0601/sift_protocol_project" target="_blank"
+                                    rel="noopener noreferrer" class="icon-btn"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Sudoku Solver</h3>
+                            <div class="tech-badges">
+                                <span class="tech-badge">C</span>
+                                <span class="tech-badge">CUDA</span>
+                            </div>
+                            <p>Developed an automated Sudoku solving program with CUDA development platform to perform
+                                parallel computing on over 100 Sudoku boards at once.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Anh Dao. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

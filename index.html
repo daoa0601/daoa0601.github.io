@@ -30,13 +30,12 @@
             <div class="container">
                 <div class="nav-content">
                     <ul class="nav-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#publications">Writing</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="contact.html" target="_blank">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="writing.html">Writing</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
                     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -48,13 +47,12 @@
             </div>
         </nav>
         <div class="mobile-nav" id="mobileNav">
-            <a href="#home" class="mobile-link">Home</a>
-            <a href="#about" class="mobile-link">About</a>
-            <a href="#education" class="mobile-link">Education</a>
-            <a href="#experience" class="mobile-link">Experience</a>
-            <a href="#publications" class="mobile-link">Writing</a>
-            <a href="#projects" class="mobile-link">Projects</a>
-            <a href="contact.html" target="_blank" class="mobile-link">Contact</a>
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="education.html" class="mobile-link">Education</a>
+            <a href="experience.html" class="mobile-link">Experience</a>
+            <a href="writing.html" class="mobile-link">Writing</a>
+            <a href="projects.html" class="mobile-link">Projects</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
         </div>
     </header>
 
@@ -63,347 +61,40 @@
         <!-- Hero Section -->
         <section id="home" class="hero section">
             <div class="container">
-                <div class="hero-profile">
-                    <img src="pfp/1631813281356.jpg" alt="Anh Dao" class="hero-avatar">
-                </div>
-                <h1 class="hero-title">Hi, I'm Anh Dao!</h1>
-                <p class="hero-subtitle">Software Developer • ML Enthusiast • Security Researcher</p>
-                <p class="hero-description">Building secure, scalable systems at the intersection of AI/ML, cloud
-                    infrastructure, and network security. Currently pursuing my M.Sc. at Aalto University.</p>
-                <div class="hero-cta">
-                    <a href="resume/cv_1page_research.pdf" class="hero-btn hero-btn-primary" download>Download CV</a>
-                    <a href="contact.html" class="hero-btn hero-btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-        </section>
+                <div class="hero-layout">
+                    <div class="hero-left">
+                        <img src="pfp/1631813281356.jpg" alt="Anh Dao" class="hero-avatar">
+                    </div>
+                    <div class="hero-right">
+                        <h1 class="hero-title">Anh Dao</h1>
+                        <p class="hero-bio">I like building things that are secure, scalable, and a little bit clever. ✨
+                        </p>
+                        <p class="hero-tagline">M.Sc. Student @ <a href="https://www.aalto.fi/en"
+                                target="_blank">Aalto</a> • R&D @ <a href="https://www.nokia.com/"
+                                target="_blank">Nokia</a></p>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <p>I started my academic journey in 2019 with a strong interest in analytical thinking, majoring in
-                        Mathematics before adding Computer Science as a second major. This combination gave me a solid
-                        foundation in both theory and application, particularly in statistics and computational
-                        problem-solving. </p>
-                    <p>Over time, I developed a passion for building secure and reliable systems. I believe that
-                        security begins with strong fundamentals, which is why I’m committed to continuously learning
-                        and improving my technical skills.</p>
-                    <p>Currently, I’m completing my Master’s in Computer Science at Aalto University, specializing in
-                        Secure Systems, with a minor in Machine Learning, Data Science, and Artificial Intelligence.
-                        Alongside my studies, I work as an R&D trainee at Nokia in the CNS 4LS team, where I apply my
-                        knowledge to real-world challenges.</p>
-                    <p>I’m always curious, eager to learn, and motivated by the idea of creating applications and
-                        systems that are both robust and secure.</p>
-                </div>
-            </div>
-        </section>
+                        <h3 class="interests-title">Interests</h3>
+                        <ul class="minimal-list">
+                            <li>Secure Systems &amp; Network Security</li>
+                            <li>Machine Learning &amp; Scalable Systems</li>
+                            <li>Cloud Infrastructure (GCP, Kubernetes)</li>
+                            <li>LLM Applications &amp; RAG Systems</li>
+                        </ul>
 
-        <!-- Education Section -->
-        <section id="education" class="education section">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="education-item">
-                    <h3>Aalto University, Finland</h3>
-                    <p class="degree">M.S. in Computer Science</p>
-                    <p class="duration">August 2024 – Current</p>
-                    <p class="grade">GPA: 4.25 / 5.00</p>
-                    <p class="coursework">
-                    <h4>Relevant Coursework:</h4>
-                    <p>Information Security, Network Security, Cloud Software and Development, Deep Learning, Machine
-                        Learning, Computer Graphics, Web Software Development, Deep Learning.</p>
-                    </p>
-                </div>
-                <div class="education-item">
-                    <h3>Grinnell College, United States</h3>
-                    <p class="degree">B.A. in Computer Science</p>
-                    <p class="duration">August 2019 – May 2023</p>
-                    <p class="grade">GPA: 3.76 / 4.00</p>
-                    <div class="coursework">
-                        <h4>Relevant Coursework:</h4>
-                        <p>Operating Systems and Parallel Algorithms, Computer Organization and Architecture, Data
-                            Science, Probability and Statistics </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="company-logo">NS</div>
-                        <div class="experience-details">
-                            <h3>R&D Trainee</h3>
-                            <p class="company">Nokia Sol. & Networks Oy – Finland</p>
-                            <p class="duration">August 2025 – Current</p>
-                        </div>
-                    </div>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Node.js</span>
-                        <span class="tech-badge">React</span>
-                        <span class="tech-badge">GCP</span>
-                    </div>
-                    <p>Building internal applications in Node and React, including front-end development for building
-                        RAG agents with Vertex AI to support 4LS team in their day-to-day operations.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="company-logo">AU</div>
-                        <div class="experience-details">
-                            <h3>Teaching Assistant</h3>
-                            <p class="company">Aalto University – Finland</p>
-                            <p class="duration">August 2024 – Current</p>
-                        </div>
-                    </div>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Docker</span>
-                        <span class="tech-badge">Kubernetes</span>
-                    </div>
-                    <p>Developed autograders for a security course and tested its integration with react-based apps for
-                        A+ Learning Management System. Assisted in technical and administrative support for 5 Master
-                        level security courses, such as revamping network-focused exercises, organizing exercise
-                        sessions, and delivering captioned content.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="company-logo">GC</div>
-                        <div class="experience-details">
-                            <h3>Research Assistant</h3>
-                            <p class="company">Grinnell College – United States</p>
-                            <p class="duration">August 2022 – May 2023</p>
-                        </div>
-                    </div>
-                    <div class="tech-badges">
-                        <span class="tech-badge">R</span>
-                        <span class="tech-badge">Python</span>
-                    </div>
-                    <p>Built multivariate statistical models in R using data gathered from games on Stat2Labs used by
-                        over 1000 students in undergraduate level statistics courses across 5 higher education
-                        institutions in the United States.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="company-logo">MZ</div>
-                        <div class="experience-details">
-                            <h3>Software Engineer Trainee</h3>
-                            <p class="company">Microsec Zrt. – Budapest, Hungary</p>
-                            <p class="duration">June 2022 – August 2022</p>
-                        </div>
-                    </div>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Go</span>
-                    </div>
-                    <p>Developed an update to the company’s current PKI certificate reading linter program that did not
-                        properly read edge cases of subordinate PKI certificates following the RFC5280 standards.</p>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div class="company-logo">GC</div>
-                        <div class="experience-details">
-                            <h3>Peer Educator</h3>
-                            <p class="company">Grinnell College – United States</p>
-                            <p class="duration">August 2021 – December 2022</p>
-                        </div>
-                    </div>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Java</span>
-                        <span class="tech-badge">C</span>
-                    </div>
-                    <p>Hosted weekly mentor sessions for 100+ students across multiple CS Courses, providing them with
-                        coding challenges and interactive Q&A sessions on the course materials.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Writing Samples Section -->
-        <section id="publications" class="section">
-            <div class="container">
-                <h2 class="section-title">Writing Samples</h2>
-                <p class="section-intro">A collection of academic papers and technical reports from my coursework and
-                    research.</p>
-                <div class="writing-grid">
-                    <div class="writing-card">
-                        <div class="writing-content">
-                            <h3>IT/OT Network Segmentation</h3>
-                            <p>Reviewing industry security standards in IT/OT architecture with Zero-trust and ML-based
-                                policy enforcement.</p>
-                            <p class="duration">Network Security Seminar • 2025</p>
-                            <div class="project-links">
-                                <a href="writing/cs_e4000_final_report.pdf" target="_blank" rel="noopener noreferrer"
-                                    class="icon-btn" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="writing-card">
-                        <div class="writing-content">
-                            <h3>DiffDock: Molecular Docking Analysis</h3>
-                            <p>Reproducing and analyzing diffusion generative models for molecular docking with
-                                SE(3)-equivariant architectures.</p>
-                            <p class="duration">Biomedical ML • 2025</p>
-                            <div class="project-links">
-                                <a href="writing/BioMedML-2.pdf" target="_blank" rel="noopener noreferrer"
-                                    class="icon-btn" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="writing-card">
-                        <div class="writing-content">
-                            <h3>GraphRAG with LRU Caching</h3>
-                            <p>Enhancing Graph Retrieval-Augmented Generation with memory-efficient caching and
-                                Text2Cypher.</p>
-                            <p class="duration">Scalable Systems • 2025</p>
-                            <div class="project-links">
-                                <a href="writing/GraphRAG (3).pdf" target="_blank" rel="noopener noreferrer"
-                                    class="icon-btn" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="writing-card">
-                        <div class="writing-content">
-                            <h3>Complex Event Processing</h3>
-                            <p>State-based load shedding for OpenCEP framework with adaptive scoring and feedback
-                                control.</p>
-                            <p class="duration">Scalable Systems • 2025</p>
-                            <div class="project-links">
-                                <a href="writing/Scalable_Proj_1.pdf" target="_blank" rel="noopener noreferrer"
-                                    class="icon-btn" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="writing-card">
-                        <div class="writing-content">
-                            <h3>Fortum PSHA Case Study</h3>
-                            <p>Operations Research case study on probabilistic seismic hazard analysis for Loviisa
-                                nuclear power plant.</p>
-                            <p class="duration">Operations Research • 2025</p>
-                            <div class="project-links">
-                                <a href="writing/fortum_finalreport.pdf" target="_blank" rel="noopener noreferrer"
-                                    class="icon-btn" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
-                            </div>
+                        <div class="hero-links">
+                            <a href="mailto:anhdd2000@gmail.com" title="Email"><i class="fas fa-envelope"></i> Email</a>
+                            <a href="https://github.com/daoa0601" target="_blank" title="GitHub"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                            <a href="https://linkedin.com/in/anhdd0601" target="_blank" title="LinkedIn"><i
+                                    class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="resume/cv_1page_research.pdf" download title="CV"><i class="fas fa-file-alt"></i>
+                                CV</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">Course and Personal Projects</h2>
-                <div class="project-note">
-                    <p>As course projects are usually not kept in a repository or made public, this a work in progress.
-                    </p>
-                    <p>More projects to be added eventually! (Feel free to ask for elaborations on anything I posted
-                        here)</p>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Web Software Development</h3>
-                            <div class="tech-badges">
-                                <span class="tech-badge">PostgreSQL</span>
-                                <span class="tech-badge">Docker</span>
-                                <span class="tech-badge">Playwright</span>
-                            </div>
-                            <p>Aalto University's Web Software Development Course project for Fall 2025 (in progress)
-                            </p>
-                            <div class="project-links">
-                                <a href="https://github.com/daoa0601/wsd-f2025" target="_blank"
-                                    rel="noopener noreferrer" class="icon-btn"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Advanced Topics in Software - LLM Cost Analysis</h3>
-                            <div class="tech-badges">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">GCP</span>
-                                <span class="tech-badge">Vertex AI</span>
-                            </div>
-                            <p>Aalto University's Advanced Topics in Software Systems course project analyzing LLM
-                                inference costs and optimization strategies.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/daoa0601/cs-e4660-advanced-topics-software" target="_blank"
-                                    rel="noopener noreferrer" class="icon-btn"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Designing and Building Scalable Web Applications</h3>
-                            <div class="tech-badges">
-                                <span class="tech-badge">Javascript</span>
-                                <span class="tech-badge">Docker</span>
-                                <span class="tech-badge">Kubernetes</span>
-                            </div>
-                            <p>Aalto University's Designing and Building Scalable Web Applications Course project for
-                                Fall 2025 (in progress)</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Operations Research Case study - Fortum PSHA Project</h3>
-                            <div class="tech-badges">
-                                <span class="tech-badge">Python</span>
-                            </div>
-                            <p>Adjusting current probabilistic seismic hazard analysis methods to better suit the
-                                requirements of Loviisa nuclear power plant.</p>
-                            <p class="duration">Jan 2025 – May 2025</p>
-                            <div class="project-links">
-                                <a href="writing/fortum_finalreport.pdf" target="_blank" rel="noopener noreferrer"
-                                    class="icon-btn" download><i class="fas fa-file-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Encrypted File Transfer Protocol</h3>
-                            <div class="tech-badges">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">PyCryptodome</span>
-                            </div>
-                            <p>Implemented a secure file messaging protocol using PyCryptodome that with a Symmetric Key
-                                Cryptography message transfer sub-protocol following the AES-GCM encryption mode,
-                                ensuring that messages are securely encrypted even in the face of server attacks.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/daoa0601/sift_protocol_project" target="_blank"
-                                    rel="noopener noreferrer" class="icon-btn"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Sudoku Solver</h3>
-                            <div class="tech-badges">
-                                <span class="tech-badge">C</span>
-                                <span class="tech-badge">CUDA</span>
-                            </div>
-                            <p>Developed an automated Sudoku solving program with CUDA development platform to perform
-                                parallel computing on over 100 Sudoku boards at once.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
     </main>
-
-    <!-- Social Sidebar -->
-    <aside class="social-sidebar">
-        <a href="mailto:anhdd2000@gmail.com" class="social-link" aria-label="Email Me"><i
-                class="fas fa-envelope"></i></a>
-        <a href="https://linkedin.com/in/anhdd0601" target="_blank" rel="noopener noreferrer" class="social-link"
-            aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/daoa0601" target="_blank" rel="noopener noreferrer" class="social-link"
-            aria-label="GitHub"><i class="fab fa-github"></i></a>
-    </aside>
 
     <!-- Footer -->
     <footer class="footer">

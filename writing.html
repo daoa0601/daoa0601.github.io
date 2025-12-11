@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Samples - Anh Dao</title>
+    <meta name="description"
+        content="Academic papers and technical reports by Anh Dao - ML, Security, and Systems research.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-content">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="experience.html">Experience</a></li>
+                        <li><a href="writing.html" class="active">Writing</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="education.html" class="mobile-link">Education</a>
+            <a href="experience.html" class="mobile-link">Experience</a>
+            <a href="writing.html" class="mobile-link active">Writing</a>
+            <a href="projects.html" class="mobile-link">Projects</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <section class="section writing-page">
+            <div class="container">
+                <h1 class="section-title">Writing Samples</h1>
+                <p class="section-intro">A collection of academic papers and technical reports from my coursework and
+                    research at Aalto University.</p>
+
+                <div class="writing-grid">
+                    <div class="writing-card animate-card">
+                        <div class="writing-content">
+                            <span class="writing-category">Network Security</span>
+                            <h3>IT/OT Network Segmentation</h3>
+                            <p>Reviewing industry security standards in IT/OT architecture with Zero-trust and ML-based
+                                policy enforcement. Covers Purdue model, micro-segmentation, and SDN approaches.</p>
+                            <p class="duration">Network Security Seminar • 2025</p>
+                            <div class="project-links">
+                                <a href="writing/cs_e4000_final_report.pdf" target="_blank" rel="noopener noreferrer"
+                                    class="btn" title="Download PDF"><i class="fas fa-file-pdf"></i> View PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="writing-card animate-card">
+                        <div class="writing-content">
+                            <span class="writing-category">Machine Learning</span>
+                            <h3>DiffDock: Molecular Docking Analysis</h3>
+                            <p>Reproducing and analyzing diffusion generative models for molecular docking with
+                                SE(3)-equivariant architectures. Achieved 38.2% Top-1 success rate on PDBBind.</p>
+                            <p class="duration">Biomedical ML • 2025</p>
+                            <div class="project-links">
+                                <a href="writing/BioMedML-2.pdf" target="_blank" rel="noopener noreferrer" class="btn"
+                                    title="Download PDF"><i class="fas fa-file-pdf"></i> View PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="writing-card animate-card">
+                        <div class="writing-content">
+                            <span class="writing-category">Scalable Systems</span>
+                            <h3>GraphRAG with LRU Caching</h3>
+                            <p>Enhancing Graph Retrieval-Augmented Generation with memory-efficient caching and
+                                Text2Cypher. Achieved 60-90% memory savings at scale.</p>
+                            <p class="duration">Scalable Systems • 2025</p>
+                            <div class="project-links">
+                                <a href="writing/GraphRAG (3).pdf" target="_blank" rel="noopener noreferrer" class="btn"
+                                    title="Download PDF"><i class="fas fa-file-pdf"></i> View PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="writing-card animate-card">
+                        <div class="writing-content">
+                            <span class="writing-category">Scalable Systems</span>
+                            <h3>Complex Event Processing</h3>
+                            <p>State-based load shedding for OpenCEP framework with adaptive scoring, O(1) hash table
+                                retrieval, and feedback controller for latency optimization.</p>
+                            <p class="duration">Scalable Systems • 2025</p>
+                            <div class="project-links">
+                                <a href="writing/Scalable_Proj_1.pdf" target="_blank" rel="noopener noreferrer"
+                                    class="btn" title="Download PDF"><i class="fas fa-file-pdf"></i> View PDF</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="writing-card animate-card">
+                        <div class="writing-content">
+                            <span class="writing-category">Operations Research</span>
+                            <h3>Fortum PSHA Case Study</h3>
+                            <p>Operations Research case study on probabilistic seismic hazard analysis methods for
+                                Loviisa nuclear power plant in collaboration with Fortum.</p>
+                            <p class="duration">Operations Research • 2025</p>
+                            <div class="project-links">
+                                <a href="writing/fortum_finalreport.pdf" target="_blank" rel="noopener noreferrer"
+                                    class="btn" title="Download PDF"><i class="fas fa-file-pdf"></i> View PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Anh Dao. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
