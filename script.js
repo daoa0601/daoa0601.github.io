@@ -29,7 +29,7 @@ function initTheme() {
     // Check for saved theme preference or system preference
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    const currentTheme = savedTheme || 'dark';
 
     htmlElement.setAttribute('data-theme', currentTheme);
 
