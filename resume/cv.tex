@@ -1,0 +1,267 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% ============================================================================
+% FORMATTING
+% ============================================================================
+% Allow long technical terms to wrap without extending into the margin.
+\setlength{\emergencystretch}{1em}
+
+% Colors
+\definecolor{linkblue}{RGB}{0,0,139}
+\definecolor{headergray}{RGB}{50,50,50}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+    pdfauthor={Anh Dao},
+    pdftitle={Anh Dao - CV}
+}
+
+% Section formatting
+\titleformat{\section}
+    {\large\bfseries\color{headergray}}
+    {}
+    {0em}
+    {\MakeUppercase}
+    [\titlerule]
+
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% List formatting
+\setlist[itemize]{leftmargin=1.5em, itemsep=2pt, parsep=0pt, topsep=4pt}
+
+% Remove page numbers (optional - uncomment if you want them)
+% \pagestyle{empty}
+
+% Or add custom footer with page numbers
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+
+% ============================================================================
+% CUSTOM COMMANDS
+% ============================================================================
+
+\newcommand{\experienceheader}[3]{%
+    \Needspace{7\baselineskip}%
+    \noindent\textbf{#1} -- \textbf{\textit{#2}} \hfill \textbf{\textit{#3}}%
+}
+
+\newcommand{\projectheader}[2]{%
+    \Needspace{7\baselineskip}%
+    \noindent\textbf{\textit{#1}} \hfill \textbf{\textit{#2}}%
+}
+
+% ============================================================================
+% DOCUMENT
+% ============================================================================
+\begin{document}
+
+% ============================================================================
+% HEADER
+% ============================================================================
+\begin{center}
+    {\LARGE\bfseries Anh Dao}\\[6pt]
+    \href{mailto:anhdd2000@gmail.com}{anhdd2000@gmail.com} $\vert$ 
+    +358 41 325 1677 $\vert$ 
+    \href{https://daoa0601.github.io/}{Portfolio}
+\end{center}
+
+% ============================================================================
+% EDUCATION
+% ============================================================================
+\section{Education}
+
+\noindent\textbf{\textit{M.Sc.\ (Technology) in Computer Science}}\\
+Aalto University, Finland \hfill \textbf{\textit{August 2024 -- July 2026}}\\
+Graduated 31 July 2026. GPA: 4.09 / 5.00. Minor: Machine Learning, Data Science and Artificial Intelligence\\
+Thesis: \textit{Mitigating Sensor-Constrained Attacks on Virtual Reality Cybersickness Classifiers}
+
+\vspace{8pt}
+
+\noindent\textbf{\textit{B.A.\ in Computer Science}}\\
+Grinnell College, United States \hfill \textbf{\textit{August 2019 -- May 2023}}\\
+GPA: 3.76 / 4.00
+
+\vspace{8pt}
+
+\noindent\textbf{Relevant Coursework:} Information Security, Network Security, Platform Security, Cryptography, Cloud Software and Systems, Scalable Systems and Data Management, Programming Parallel Computers, Deep Learning, Machine Learning, Federated Learning, Machine Learning in Biomedicine, Complex Networks, Seminar on Large Language Models
+
+% ============================================================================
+% EXPERIENCE
+% ============================================================================
+\section{Experience}
+
+\experienceheader{Smartly}{Software Engineer}{Feb 2026 -- Present}
+\begin{itemize}
+    \item Working on the Agentic Orchestration team for Smartly's core initiative \href{https://www.smartly.io/product/synapse}{Synapse}, across \textbf{Python}/\allowbreak\textbf{Pydantic AI} and \textbf{TypeScript}/\allowbreak\textbf{Node.js} projects.
+    \item Building Smartly's \textbf{Pydantic AI}-based agentic orchestration harness, including progressive tool discovery, Plan Mode control flow and LLM-friendly tool interfaces, as well as Smartly's external MCP server.
+    \item Maintaining \textbf{PostgreSQL} storage and \textbf{Redis} caching for agents' metadata, message history and draft outputs, plus PoCs for a persisted artifacts log; Redis also backs our \textbf{BullMQ} job queues.
+    \item Unblocked 2 core teams through cross-team collaboration, shipping emergency features, bug fixes and refactors.
+    \item Prototyped the company's 1st external MCP gateway and \textbf{TypeScript}-based MCP servers, creating the company guidelines on tool design and MCP implementation for 20+ engineering teams.
+    \item Assisted in the 2-person migration of the company's Frontend monorepo of 4 million lines of TypeScript from \textbf{Jest} to \textbf{Vitest}, and solo-migrated 4 more repos from Jest/ESLint/Prettier to Vitest/Oxlint/Oxfmt.
+    \item Optimized 2 existing LLM-based services through \textbf{LangFuse} trace monitoring and evals-based prompt optimization, reducing the cost of inference by 2.5x without loss of performance.
+    \item Part of the company's AI Productivity Frontier group, delivering Knowledge Sharing sessions to 200+ R\&D employees.
+\end{itemize}
+
+\vspace{8pt}
+
+\experienceheader{Musixmatch}{Research Assistant}{Feb 2026 -- Aug 2026}
+\begin{itemize}
+    \item Built an ETL data pipeline in Python to exhaustively collect, clean, and deduplicate Musixmatch's lyrics dataset through their provisioned API, up to 10M+ tracks.
+    \item Ran batch LLM annotation on 15,000+ Finnish tracks, cleaning up malformed LLM outputs into structured data.
+    \item Replicated and extended prior work on Finnish hip-hop networks and rhyme analysis with cross-linguistic and literary analysis. \href{https://mining4meaning.com/2026/08/21/raplysaattori-ja-kadonneen-teroittimen-arvoitus/}{Link}.
+\end{itemize}
+
+\vspace{8pt}
+
+\experienceheader{Aalto University}{Master's Thesis Worker}{Jan 2026 -- Jul 2026}
+\begin{itemize}
+    \item Developed feature-constrained gradient attacks and a confidence-triggered fallback defense for VR cybersickness classifiers using sensor-based LSTM models.
+\end{itemize}
+
+\vspace{8pt}
+
+\experienceheader{Nokia Solutions \& Networks}{R\&D Trainee}{Aug 2025 -- Jan 2026}
+\begin{itemize}
+    \item Built a \textbf{Python} ETL pipeline indexing 100,000+ documents into \textbf{Vertex AI Search} on \textbf{GCP}, unifying product search for a RAG engine.
+    \item Prototyped a multi-agent harness with Gemini Agent Platform combining fanout research, network logs triaging, and RAG-based QnA, reducing incident triage time by $\sim$40\%; built the supporting LLM tools in \textbf{Python} and \textbf{React}.
+\end{itemize}
+
+\vspace{8pt}
+
+\experienceheader{Aalto University}{Teaching Assistant}{Aug 2024 -- 2025}
+\begin{itemize}
+    \item Assisted in core Master's-level Security courses, totalling over 500 students, by holding office hours, designing network security assignments, and creating tools for fast grading.
+\end{itemize}
+
+\vspace{8pt}
+
+\experienceheader{Grinnell College (DASIL)}{Research Assistant}{Aug 2022 -- May 2023}
+\begin{itemize}
+    \item Built multivariate statistical models in \textbf{R} and \textbf{Python} using game data from \href{https://stat2labs.sites.grinnell.edu/}{Stat2Labs}, a platform used by 1,000+ students across 5 institutions.
+    \item Helped over 150 students and faculty weekly with computing and data-related projects.
+\end{itemize}
+
+\vspace{8pt}
+
+\experienceheader{Microsec Zrt.}{Software Engineer Trainee}{Jun -- Aug 2022}
+\begin{itemize}
+    \item Extended the company's PKI certificate linter in \textbf{Go} to handle edge cases of subordinate certificates following RFC 5280.
+    \item Implemented parsing logic for X.509 certificate extensions and validation rules.
+\end{itemize}
+
+\vspace{8pt}
+
+\experienceheader{Grinnell College}{Peer Educator -- Computer Science Department}{Aug 2021 -- Dec 2022}
+\begin{itemize}
+    \item Hosted weekly mentor sessions for 100+ students across multiple CS courses, with coding challenges in \textbf{Java} and \textbf{C} and interactive Q\&A sessions on course materials.
+\end{itemize}
+
+\section{Projects}
+
+\projectheader{Teleport Contest -- Autonomous Coding Harness}{2026 -- Present}
+\begin{itemize}
+    \item Participating in the Teleport Coding \href{https://mazesofmenace.ai/}{Challenge}, using an agent swarm to port NetHack 5.0, a complex roguelike game with 500,000 lines of C and Lua code, to JavaScript with byte-exact behavior.
+    \item Designing guardrails, multi-agent orchestration, evaluation mechanisms to prevent common pitfalls with independent long-horizon agents like reward hacking, challenge bypass and goal misalignment.
+\end{itemize}
+
+\vspace{8pt}
+
+\projectheader{Personal Assistant on Cloudflare Durable Objects}{2026 -- Present}
+\begin{itemize}
+    \item Building a personal assistant on \textbf{Cloudflare Durable Objects} using the Pi agent harness, extended with custom OptChat-based context management.
+\end{itemize}
+
+\vspace{8pt}
+
+\projectheader{MLX Silicon Inference assorted projects}{2026}
+\begin{itemize}
+    \item Ported Open Source Decision models into an MLX-compatible framework, including Cloudflare Clef. Evaluated and optimized inference performance on an M4 Pro with relevant Jev-based evals and benchmarks.
+    \item In separate \textbf{llama.cpp} experiments using \textbf{Metal}, speculative decoding increased Gemma 4 12B throughput by 12.1\% across three tasks.
+\end{itemize}
+
+\vspace{8pt}
+
+\projectheader{Scalable Agentic Systems Evaluation}{Jan -- Apr 2026}
+\begin{itemize}
+    \item Ran SWE-Bench Lite evaluations on 300 software engineering tasks, utilizing open source models like GLM-4.7, across different harnesses like mini-swe-agent and Claude Code
+    \item Deployed \textbf{vLLM} with \textbf{ROCm} on LUMI's AMD MI250X GPUs using \textbf{SLURM}; profiled GPU utilization, memory, latency, and concurrency for 6+ open-weight LLMs on these same tasks, fixing incompatible inference formats and missing support for AMD-based inference cookbooks.
+\end{itemize}
+
+\vspace{8pt}
+
+\projectheader{Complex Event Processing with Proper Load Shedding}{Sep -- Dec 2025}
+\begin{itemize}
+    \item Implemented a state-based load shedding strategy in \textbf{Python} for the \textbf{OpenCEP} framework to handle bursty workloads while maintaining low latency and acceptable recall
+    \item Developed adaptive load shedding using weighted scoring of partial matches, with a feedback controller that adjusts the drop fraction from p90 latency and CPU/memory pressure
+    \item Achieved 90-100\% recall rates while maintaining latency limits through intelligent partial match pruning
+    \item \textit{Role: Semantic/hybrid load-shedding and state-management implementation. Collaborators: Quoc-Huy Trinh, Pablo Rubio}
+    \item \textit{Code: \href{https://github.com/huyquoctrinh/Scalablesys-Assignment1}{github.com/huyquoctrinh/Scalablesys-Assignment1}}
+\end{itemize}
+
+\vspace{8pt}
+
+% ---------------------------------------------------------------------------
+% GraphRAG Project - 2025
+% ---------------------------------------------------------------------------
+\projectheader{Enhance Graph Retrieval-Augmented Generation by Caching Method}{Sep -- Dec 2025}
+\begin{itemize}
+    \item Enhanced a \textbf{Python}/\textbf{Kuzu} GraphRAG pipeline by integrating an LRU caching mechanism and memory-efficient caching variant combining context pruning and on-the-fly compression
+    \item Implemented Text2Cypher component using dynamic few-shot prompting with TF-IDF-based exemplar selection for semantic similarity matching
+    \item Achieved highest throughput and lowest latency at scale with memory-efficient LRU caching, demonstrating 60-90\% memory savings for large context-heavy entries
+    \item \textit{Role: Few-shot prompting implementation and dataset creation. Collaborators: Quoc-Huy Trinh, Pablo Rubio}
+    \item \textit{Code: \href{https://github.com/huyquoctrinh/ScalableSys-Proj2}{github.com/huyquoctrinh/ScalableSys-Proj2}}
+\end{itemize}
+
+\vspace{8pt}
+
+% ============================================================================
+% SKILLS
+% ============================================================================
+\section{Skills}
+
+\noindent\textbf{Languages:} Python, TypeScript/JavaScript, Go, Java, C/C++, R, SQL, Cypher
+
+\vspace{4pt}
+
+\noindent\textbf{Frameworks \& Libraries:} Pydantic AI, Node.js, React, Jotai, Express.js, Model Context Protocol (MCP), PyTorch, MLX, vLLM, LiteLLM, GEPA, DSPy, NetworkX, scikit-learn, pandas, NumPy
+
+\vspace{4pt}
+
+\noindent\textbf{Tools \& Platforms:} Git, Docker, Kubernetes, AWS, Google Cloud Platform, Vertex AI, Cloudflare Workers, Kafka, BullMQ, SLURM, Vitest, Playwright, Oxlint, Oxfmt, LangFuse, Prometheus, Grafana, Codex, CUDA
+
+\vspace{4pt}
+
+\noindent\textbf{Databases:} PostgreSQL, Redis, Kuzu (Graph DB), Neo4j
+
+\vspace{4pt}
+
+\noindent\textbf{Concepts:} Agent Harnesses, LLM Evaluation, Prompt Optimization, Adversarial Machine Learning, Machine Learning, Deep Learning, Graph Neural Networks, Diffusion Models, RAG Systems, Complex Event Processing, Network Security, Zero-trust Architecture, PKI/X.509, Cryptography
+
+% ============================================================================
+% PUBLICATIONS (Optional - uncomment if needed)
+% ============================================================================
+% \section{Publications}
+% 
+% \noindent Add publications here if applicable
+
+\end{document}

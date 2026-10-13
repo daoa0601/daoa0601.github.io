@@ -14,6 +14,7 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+*.xdv
 *.bbl
 *.blg
 *.nav
@@ -21,3 +22,4 @@
 *.vrb
 
 *.tex
+!resume/*.tex

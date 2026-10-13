@@ -1,0 +1,148 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% ============================================================================
+% FORMATTING
+% ============================================================================
+% Allow long technical terms to wrap without extending into the margin.
+\setlength{\emergencystretch}{1em}
+
+% Colors
+\definecolor{linkblue}{RGB}{0,0,139}
+\definecolor{headergray}{RGB}{50,50,50}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+    pdfauthor={Anh Dao},
+    pdftitle={Anh Dao - CV}
+}
+
+% Section formatting
+\titleformat{\section}
+    {\normalsize\bfseries\color{headergray}}
+    {}
+    {0em}
+    {\MakeUppercase}
+    [\titlerule]
+
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% List formatting - tighter
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, parsep=0pt, topsep=2pt}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% ============================================================================
+% CUSTOM COMMANDS
+% ============================================================================
+\newcommand{\experienceheader}[3]{%
+    \Needspace{7\baselineskip}%
+    \noindent\textbf{#1} -- \textbf{\textit{#2}} \hfill \textbf{\textit{#3}}%
+}
+
+\newcommand{\projectheader}[2]{%
+    \Needspace{7\baselineskip}%
+    \noindent\textbf{\textit{#1}} \hfill \textbf{\textit{#2}}%
+}
+
+% ============================================================================
+% DOCUMENT
+% ============================================================================
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries Anh Dao}\\[4pt]
+    \href{mailto:anhdd2000@gmail.com}{anhdd2000@gmail.com} $\vert$
+    +358 41 325 1677 $\vert$
+    \href{https://daoa0601.github.io/}{daoa0601.github.io}
+\end{center}
+
+\section{Experience}
+
+\experienceheader{Smartly}{Software Engineer}{Feb 2026 -- Present}
+\begin{itemize}
+    \item Working on the Agentic Orchestration team for Smartly's core initiative \href{https://www.smartly.io/product/synapse}{Synapse}
+    \item Building Smartly's \textbf{Pydantic AI}-based agentic orchestration harness and Smartly's external MCP server
+    \item Maintaining \textbf{PostgreSQL} storage and \textbf{Redis} caching for agents' metadata, message history and draft outputs, plus PoCs for a persisted artifacts log
+    \item Prototyped the company's 1st external MCP gateway and \textbf{TypeScript}-based MCP servers, creating the company guidelines for good tool design and MCP implementation
+    \item Assisted in the 2-person migration of the company's Frontend monorepo of 4 million lines of TypeScript from \textbf{Jest} to \textbf{Vitest} and 4 more repos from Jest/ESLint/Prettier to Vitest/Oxlint/Oxfmt solo
+    \item Optimized 2 existing LLM-based services through \textbf{LangFuse} trace monitoring and evals-based prompt optimization, reducing the cost of inference by 2.5x without loss of performance
+    \item Part of the company's AI Productivity Frontier group, delivering Knowledge Sharing sessions to 200+ R\&D employees
+\end{itemize}
+
+\vspace{3pt}
+
+\experienceheader{Musixmatch}{Research Assistant}{Feb 2026 -- Aug 2026}
+\begin{itemize}
+    \item Collaborated with Professor Eric Malmi of Aalto University to build an ETL data pipeline in Python to exhaustively collect, clean, and deduplicate Musixmatch's lyrics dataset through their provisioned API, up to 10M+ tracks
+    \item Ran batch LLM annotation on 15,000+ Finnish tracks, cleaning up malformed LLM outputs into structured data
+    \item Replicated prior research on Finnish Rhyme analysis, extending it to other genres and languages. \href{https://mining4meaning.com/2026/08/21/raplysaattori-ja-kadonneen-teroittimen-arvoitus/}{Link}
+\end{itemize}
+
+\vspace{3pt}
+
+\experienceheader{Nokia Solutions \& Networks}{R\&D Trainee}{Aug 2025 -- Jan 2026}
+\begin{itemize}
+    \item Built a pipeline indexing 100,000+ documents into \textbf{Vertex AI Search} on \textbf{GCP}, unifying product search for RAG
+    \item Prototyped a multi-agent harness with Gemini Agent Platform combining fanout research, network logs triaging, and RAG-based QnA, reducing the incident triage time by $\sim$40\%
+\end{itemize}
+
+\vspace{3pt}
+
+\experienceheader{Aalto University}{Teaching Assistant \& Master's Thesis Worker}{Aug 2024 -- Jul 2026}
+\begin{itemize}
+    \item Assisted in core Master's-level Security courses, totalling over 500 students, by holding office hours, designing network security assignments, and creating tools for fast grading
+    \item Thesis: gradient attacks and a confidence-triggered fallback defense for VR cybersickness LSTM classifiers
+\end{itemize}
+
+\section{Projects}
+
+\projectheader{Assorted Agentic Systems Projects}{2026 -- Present}
+\begin{itemize}
+    \item Participating in Teleport Coding \href{https://mazesofmenace.ai/}{Challenge}, porting Nethack 5.0, a complex roguelike game with 500,000 lines of C and Lua code to JavaScript with byte-exact behavior
+    \item Designing guardrails for multi-agent orchestration, multi-turn evals framework to prevent common pitfalls with independent long-horizon agents like reward hacking, challenge bypass and goal misalignment
+    \item Building a personal assistant on Cloudflare Durable Objects using the Pi agent harness, extended with custom OptChat-based context management
+\end{itemize}
+
+\vspace{3pt}
+
+\projectheader{Scalable Agentic Systems Evaluation}{Jan -- Apr 2026}
+\begin{itemize}
+    \item Benchmarked 300 software engineering tasks (SWE-Bench Lite) across 3 different harnesses and 6 open weight models, deployed on CSC's LUMI supercomputers with \textbf{SLURM} and \textbf{ROCm}
+    \item Profiled GPU utilization and evals results, fixing incompatibilities with LUMI's \textbf{Singularity}-based Containers, models' malformed reasoning, and erroneous tool usage
+\end{itemize}
+
+\section{Education}
+
+\noindent\textbf{\textit{M.Sc.\ (Tech.)\ in Computer Science}}, Aalto University (GPA 4.09/5.00, ML minor) \hfill \textbf{\textit{Aug 2024 -- Jul 2026}}
+
+\vspace{3pt}
+
+\noindent\textbf{\textit{B.A.\ in Computer Science}}, Grinnell College (GPA 3.76/4.00) \hfill \textbf{\textit{Aug 2019 -- May 2023}}
+
+\section{Skills}
+
+\noindent\textbf{Languages:} TypeScript, Python, Go, Java, C/C++, SQL, R
+
+\noindent\textbf{Frameworks \& Libraries:} Node.js, React, Jotai, Pydantic AI, MCP, PyTorch, vLLM, MLX
+
+\noindent\textbf{Tools \& Platforms:} PostgreSQL, Redis, Kafka, BullMQ, Kubernetes, AWS/GCP, LangFuse, Grafana, \mbox{Playwright}
+
+\end{document}

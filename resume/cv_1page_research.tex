@@ -1,0 +1,182 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% ============================================================================
+% FORMATTING
+% ============================================================================
+% Allow long technical terms to wrap without extending into the margin.
+\setlength{\emergencystretch}{1em}
+
+% Colors
+\definecolor{linkblue}{RGB}{0,0,139}
+\definecolor{headergray}{RGB}{50,50,50}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkblue,
+    urlcolor=linkblue,
+    pdfauthor={Anh Dao},
+    pdftitle={Anh Dao - CV}
+}
+
+% Section formatting
+\titleformat{\section}
+    {\normalsize\bfseries\color{headergray}}
+    {}
+    {0em}
+    {\MakeUppercase}
+    [\titlerule]
+
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% List formatting - tighter
+\setlist[itemize]{leftmargin=1.2em, itemsep=1pt, parsep=0pt, topsep=1pt}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% ============================================================================
+% CUSTOM COMMANDS
+% ============================================================================
+\newcommand{\experienceheader}[3]{%
+    \Needspace{7\baselineskip}%
+    \noindent\textbf{#1} -- \textbf{\textit{#2}} \hfill \textbf{\textit{#3}}%
+}
+
+\newcommand{\projectheader}[2]{%
+    \Needspace{7\baselineskip}%
+    \noindent\textbf{\textit{#1}} \hfill \textbf{\textit{#2}}%
+}
+
+% ============================================================================
+% DOCUMENT
+% ============================================================================
+\begin{document}
+
+% ============================================================================
+% HEADER
+% ============================================================================
+\begin{center}
+    {\LARGE\bfseries Anh Dao}\\[4pt]
+    \href{mailto:anhdd2000@gmail.com}{anhdd2000@gmail.com} $\vert$
+    +358 41 325 1677 $\vert$
+    \href{https://daoa0601.github.io/}{daoa0601.github.io}
+\end{center}
+
+% ============================================================================
+% EDUCATION
+% ============================================================================
+\section{Education}
+
+\noindent\textbf{\textit{M.Sc.\ (Tech.)\ in Computer Science}}, Aalto University \hfill \textbf{\textit{Aug 2024 -- Jul 2026}}\\
+Graduated 31 July 2026. GPA: 4.09/5.00. Minor: Machine Learning, Data Science and AI\\
+Thesis: \textit{Mitigating Sensor-Constrained Attacks on Virtual Reality Cybersickness Classifiers}
+
+\vspace{4pt}
+
+\noindent\textbf{\textit{B.A.\ in Computer Science}}, Grinnell College (GPA 3.76/4.00) \hfill \textbf{\textit{Aug 2019 -- May 2023}}
+
+% ============================================================================
+% EXPERIENCE
+% ============================================================================
+\section{Experience}
+
+\experienceheader{Smartly}{Software Engineer}{Feb 2026 -- Present}
+\begin{itemize}
+    \item Working on the Agentic Orchestration team for Smartly's core initiative \href{https://www.smartly.io/product/synapse}{Synapse}, across \textbf{Python}/\allowbreak\textbf{Pydantic AI} and \textbf{TypeScript}/\allowbreak\textbf{Node.js} projects.
+    \item Building Smartly's \textbf{Pydantic AI}-based agentic orchestration harness, including progressive tool discovery, Plan Mode control flow and LLM-friendly tool interfaces, as well as Smartly's external MCP server.
+    \item Maintaining \textbf{PostgreSQL} storage and \textbf{Redis} caching for agents' metadata, message history and draft outputs, plus PoCs for a persisted artifacts log; Redis also backs our \textbf{BullMQ} job queues.
+    \item Unblocked 2 core teams through cross-team collaboration, shipping emergency features, bug fixes and refactors.
+    \item Prototyped the company's 1st external MCP gateway and \textbf{TypeScript}-based MCP servers, creating the company guidelines on tool design and MCP implementation for 20+ engineering teams.
+    \item Assisted in the 2-person migration of the company's Frontend monorepo of 4 million lines of TypeScript from \textbf{Jest} to \textbf{Vitest}, and solo-migrated 4 more repos from Jest/ESLint/Prettier to Vitest/Oxlint/Oxfmt.
+    \item Optimized 2 existing LLM-based services through \textbf{LangFuse} trace monitoring and evals-based prompt optimization, reducing the cost of inference by 2.5x without loss of performance.
+    \item Part of the company's AI Productivity Frontier group, delivering Knowledge Sharing sessions to 200+ R\&D employees.
+\end{itemize}
+
+\vspace{3pt}
+
+\experienceheader{Musixmatch}{Research Assistant}{Feb 2026 -- Aug 2026}
+\begin{itemize}
+    \item Built an ETL data pipeline in Python to exhaustively collect, clean, and deduplicate Musixmatch's lyrics dataset through their provisioned API, up to 10M+ tracks.
+    \item Ran batch LLM annotation on 15,000+ Finnish tracks, cleaning up malformed LLM outputs into structured data.
+    \item Replicated and extended prior work on Finnish hip-hop networks and rhyme analysis with cross-linguistic and literary analysis. \href{https://mining4meaning.com/2026/08/21/raplysaattori-ja-kadonneen-teroittimen-arvoitus/}{Link}.
+\end{itemize}
+
+\vspace{3pt}
+
+\experienceheader{Aalto University}{Master's Thesis Worker}{Jan 2026 -- Jul 2026}
+\begin{itemize}
+    \item Developed feature-constrained gradient attacks and a confidence-triggered fallback defense for VR cybersickness classifiers using sensor-based LSTM models.
+\end{itemize}
+
+\vspace{3pt}
+
+\experienceheader{Nokia Solutions \& Networks}{R\&D Trainee}{Aug 2025 -- Jan 2026}
+\begin{itemize}
+    \item Built a \textbf{Python} ETL pipeline indexing 100,000+ documents into \textbf{Vertex AI Search} on \textbf{GCP}, unifying product search for a RAG engine.
+    \item Prototyped a multi-agent harness with Gemini Agent Platform combining fanout research, network logs triaging, and RAG-based QnA, reducing incident triage time by $\sim$40\%; built the supporting LLM tools in \textbf{Python} and \textbf{React}.
+\end{itemize}
+
+\vspace{3pt}
+
+\experienceheader{Aalto University}{Teaching Assistant}{Aug 2024 -- 2025}
+\begin{itemize}
+    \item Assisted in core Master's-level Security courses, totalling over 500 students, by holding office hours, designing network security assignments, and creating tools for fast grading.
+\end{itemize}
+
+\vspace{3pt}
+
+\experienceheader{Grinnell College (DASIL)}{Research Assistant}{Aug 2022 -- May 2023}
+\begin{itemize}
+    \item Built multivariate statistical models in \textbf{R} and \textbf{Python} from \href{https://stat2labs.sites.grinnell.edu/}{Stat2Labs} game data (platform used by 1,000+ students across 5 institutions).
+\end{itemize}
+
+\vspace{3pt}
+
+\experienceheader{Microsec Zrt.}{Software Engineer Trainee}{Jun -- Aug 2022}
+\begin{itemize}
+    \item Extended a PKI certificate linter in \textbf{Go} to handle X.509 extension edge cases following RFC 5280.
+\end{itemize}
+
+% ============================================================================
+% PROJECTS
+% ============================================================================
+\section{Projects}
+
+\projectheader{Teleport Contest -- Autonomous Coding Harness}{2026 -- Present}
+\begin{itemize}
+    \item Participating in the Teleport Coding \href{https://mazesofmenace.ai/}{Challenge}, using an agent swarm to port NetHack 5.0, a complex roguelike game with 500,000 lines of C and Lua code, to JavaScript with byte-exact behavior.
+    \item Designing guardrails, multi-agent orchestration, evaluation mechanisms to prevent common pitfalls with independent long-horizon agents like reward hacking, challenge bypass and goal misalignment.
+\end{itemize}
+
+\vspace{3pt}
+
+\projectheader{MLX Silicon Inference assorted projects}{2026}
+\begin{itemize}
+    \item Ported Open Source Decision models into an MLX-compatible framework, including Cloudflare Clef. Evaluated and optimized inference performance on an M4 Pro with relevant Jev-based evals and benchmarks.
+    \item In separate \textbf{llama.cpp} experiments using \textbf{Metal}, speculative decoding increased Gemma 4 12B throughput by 12.1\% across three tasks.
+\end{itemize}
+
+\vspace{3pt}
+
+\projectheader{Scalable Agentic Systems Evaluation}{Jan -- Apr 2026}
+\begin{itemize}
+    \item Ran SWE-Bench Lite evaluations on 300 software engineering tasks, utilizing open source models like GLM-4.7, across different harnesses like mini-swe-agent and Claude Code
+    \item Deployed \textbf{vLLM} with \textbf{ROCm} on LUMI's AMD MI250X GPUs using \textbf{SLURM}; profiled GPU utilization, memory, latency, and concurrency for 6+ open-weight LLMs on these same tasks, fixing incompatible inference formats and missing support for AMD-based inference cookbooks.
+\end{itemize}
+
+\end{document}
