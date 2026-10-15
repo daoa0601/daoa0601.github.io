@@ -101,7 +101,7 @@ Thesis: \textit{Mitigating Sensor-Constrained Attacks on Virtual Reality Cybersi
     \item Building Smartly's \textbf{Pydantic AI}-based agentic orchestration harness, including progressive tool discovery, Plan Mode control flow and LLM-friendly tool interfaces, as well as Smartly's external MCP server.
     \item Maintaining \textbf{PostgreSQL} storage and \textbf{Redis} caching for agents' metadata, message history and draft outputs, plus PoCs for a persisted artifacts log; Redis also backs our \textbf{BullMQ} job queues.
     \item Unblocked 2 core teams through cross-team collaboration, shipping emergency features, bug fixes and refactors.
-    \item Prototyped the company's 1st external MCP gateway and \textbf{TypeScript}-based MCP servers, creating the company guidelines on tool design and MCP implementation for 20+ engineering teams.
+    \item Prototyped the company's 1st external MCP gateway and \textbf{TypeScript}-based MCP servers, creating general guidelines for good tool design and MCP implementation for 20+ engineering teams.
     \item Assisted in the 2-person migration of the company's Frontend monorepo of 4 million lines of TypeScript from \textbf{Jest} to \textbf{Vitest}, and solo-migrated 4 more repos from Jest/ESLint/Prettier to Vitest/Oxlint/Oxfmt.
     \item Optimized 2 existing LLM-based services through \textbf{LangFuse} trace monitoring and evals-based prompt optimization, reducing the cost of inference by 2.5x without loss of performance.
     \item Part of the company's AI Productivity Frontier group, delivering Knowledge Sharing sessions to 200+ R\&D employees.
@@ -111,9 +111,9 @@ Thesis: \textit{Mitigating Sensor-Constrained Attacks on Virtual Reality Cybersi
 
 \experienceheader{Musixmatch}{Research Assistant}{Feb 2026 -- Aug 2026}
 \begin{itemize}
-    \item Built an ETL data pipeline in Python to exhaustively collect, clean, and deduplicate Musixmatch's lyrics dataset through their provisioned API, up to 10M+ tracks.
+    \item Built an ETL data pipeline in Python to exhaustively collect, clean, and deduplicate over 4 million tracks' lyrics across languages and genres.
     \item Ran batch LLM annotation on 15,000+ Finnish tracks, cleaning up malformed LLM outputs into structured data.
-    \item Replicated and extended prior work on Finnish hip-hop networks and rhyme analysis with cross-linguistic and literary analysis. \href{https://mining4meaning.com/2026/08/21/raplysaattori-ja-kadonneen-teroittimen-arvoitus/}{Link}.
+    \item Replicated and extended Professor Eric Malmi's research on Finnish rhyme analysis and hip-hop networks with cross-linguistic and literary analysis. \href{https://mining4meaning.com/2026/08/21/raplysaattori-ja-kadonneen-teroittimen-arvoitus/}{Blog}
 \end{itemize}
 
 \vspace{3pt}
@@ -127,8 +127,8 @@ Thesis: \textit{Mitigating Sensor-Constrained Attacks on Virtual Reality Cybersi
 
 \experienceheader{Nokia Solutions \& Networks}{R\&D Trainee}{Aug 2025 -- Jan 2026}
 \begin{itemize}
-    \item Built a \textbf{Python} ETL pipeline indexing 100,000+ documents into \textbf{Vertex AI Search} on \textbf{GCP}, unifying product search for a RAG engine.
-    \item Prototyped a multi-agent harness with Gemini Agent Platform combining fanout research, network logs triaging, and RAG-based QnA, reducing incident triage time by $\sim$40\%; built the supporting LLM tools in \textbf{Python} and \textbf{React}.
+    \item Synced 100,000+ documents across internal Nokia sources into \textbf{Vertex AI Search} on \textbf{GCP} with a \textbf{Python} ETL pipeline for RAG-based product queries.
+    \item Built LLM-based internal tools in \textbf{Python} and \textbf{React} for logs processing and analysis, on a Gemini Agent Platform multi-agent harness combining fanout research, network logs triaging, and RAG-based QnA, reducing the incident triage time by $\sim$40\%.
 \end{itemize}
 
 \vspace{3pt}
@@ -157,10 +157,11 @@ Thesis: \textit{Mitigating Sensor-Constrained Attacks on Virtual Reality Cybersi
 % ============================================================================
 \section{Projects}
 
-\projectheader{Teleport Contest -- Autonomous Coding Harness}{2026 -- Present}
+\projectheader{Assorted Agentic Systems Projects}{2026 -- Present}
 \begin{itemize}
-    \item Participating in the Teleport Coding \href{https://mazesofmenace.ai/}{Challenge}, using an agent swarm to port NetHack 5.0, a complex roguelike game with 500,000 lines of C and Lua code, to JavaScript with byte-exact behavior.
-    \item Designing guardrails, multi-agent orchestration, evaluation mechanisms to prevent common pitfalls with independent long-horizon agents like reward hacking, challenge bypass and goal misalignment.
+    \item Participating in the Teleport Coding \href{https://mazesofmenace.ai/}{Challenge}, using an agent swarm to port NetHack 5.0, a roguelike game with 500,000 lines of C and Lua code, to JavaScript with byte-exact behavior.
+    \item Designing guardrails for multi-agent orchestration and a multi-turn evals framework to prevent common pitfalls with independent long-horizon agents like reward hacking, challenge bypass and goal misalignment.
+    \item Building a personal assistant on Cloudflare Durable Objects with the Pi agent harness and OptChat-based memory: a context management system based on a summary tree of the entire chat history.
 \end{itemize}
 
 \vspace{3pt}
@@ -175,8 +176,8 @@ Thesis: \textit{Mitigating Sensor-Constrained Attacks on Virtual Reality Cybersi
 
 \projectheader{Scalable Agentic Systems Evaluation}{Jan -- Apr 2026}
 \begin{itemize}
-    \item Ran SWE-Bench Lite evaluations on 300 software engineering tasks, utilizing open source models like GLM-4.7, across different harnesses like mini-swe-agent and Claude Code
-    \item Deployed \textbf{vLLM} with \textbf{ROCm} on LUMI's AMD MI250X GPUs using \textbf{SLURM}; profiled GPU utilization, memory, latency, and concurrency for 6+ open-weight LLMs on these same tasks, fixing incompatible inference formats and missing support for AMD-based inference cookbooks.
+    \item Benchmarked 300 software engineering tasks (SWE-Bench Lite) across 3 different harnesses, including mini-swe-agent and Claude Code, and 6 open-weight models like GLM-4.7.
+    \item Deployed \textbf{vLLM} with \textbf{ROCm} on CSC's LUMI supercomputer (AMD MI250X GPUs) using \textbf{SLURM}; profiled evals results alongside GPU utilization, memory, latency, and concurrency, fixing incompatibilities with LUMI's \textbf{Singularity}-based containers, models' malformed reasoning, erroneous tool usage, and missing AMD support in inference cookbooks.
 \end{itemize}
 
 \end{document}
